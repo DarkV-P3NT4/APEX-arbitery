@@ -1,0 +1,51 @@
+type: Constructor
+
+name: "Contractor"
+description: "Constructs Blocks as Payload, Mostly used to build Walls due to it's limitation."
+details: "This is a Cheap Copy of the Constructor, Why would it exist? because why not."
+
+health: 850
+size: 3
+buildTime: 192
+category: units
+
+requirements: [
+  copper/300
+  lead/100
+  silicon/75
+  thorium/50
+]
+
+minBlockSize: 2
+maxBlockSize: 2
+configurable: true
+buildSpeed: 0.8
+filter: [
+  "copper-wall-large"
+  "scrap-wall-large"
+  "phase-wall-large"
+  "plastanium-wall-large"
+  "thorium-wall-large"
+  "titanium-wall-large"
+  "surge-wall-large"
+  "custom-apex-plated-copper-wall-large"
+  "custom-apex-plated-phase-wall-large"
+  "custom-apex-plated-plastanium-wall-large"
+  "custom-apex-plated-thorium-wall-large"
+  "custom-apex-plated-titanium-wall-large"
+  "custom-apex-plated-surge-wall-large"
+]
+
+consumes: {
+  power: 1.5
+}
+
+research: {
+  parent: payload-conveyor
+  requirements: [
+    copper/3000
+    lead/1000
+    silicon/750
+    thorium/500
+  ]
+}
