@@ -12,7 +12,7 @@ This includes
 
 **PLATED WALLS** - Tired of your walls breaking easily? have sum Armor and Bonus HP... sorry if its tougher than Carbide
 
-**CUSTOM MUSIC** - Woah custom music? only 3 though, im not that committing despite my passion
+**CUSTOM MUSIC** - Woah custom music? only 3 though, im not that committing despite my passion [Dev Warning, Menu and Launch can crash when its trying to loop]
 
 and Upcoming Things:
 
