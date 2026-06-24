@@ -1,0 +1,18 @@
+type: wall
+
+name: "Plated Titanium Wall"
+description: "Protects structures from enemy projectiles. Has more health and armor than the regular Titanium Wall."
+details: "Henlo, mi a tianim wal. and das me fan tori tori!"
+
+health: 660
+armor: 3
+
+size: 1
+buildTime: 12
+requirements: [
+  titanium/10
+  graphite/6
+  lead/5
+]
+research: titanium-wall
+category: defense

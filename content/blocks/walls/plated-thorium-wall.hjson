@@ -1,0 +1,19 @@
+type: wall
+
+name: "Plated Thorium Wall"
+description: "Protects structures from enemy projectiles. Has more health and armor than the regular Thorium Wall."
+details: "halo! me thorim, dot fogi ma fens!"
+
+health: 1200
+armor: 4
+
+size: 1
+buildTime: 12.2
+requirements: [
+  thorium/9
+  titanium/7
+  silicon/5
+]
+researchCostMultiplier: 2
+research: thorium-wall
+category: defense
