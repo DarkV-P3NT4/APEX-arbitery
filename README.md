@@ -1,6 +1,7 @@
 Ehh whatever let's get this started...
 
-welcome to 
+welcome to your typical Generic Mod from a Solo Maker
+
 # APEX Arbitery
 
 where i give you some content i can possibly do... lategame stuff.
