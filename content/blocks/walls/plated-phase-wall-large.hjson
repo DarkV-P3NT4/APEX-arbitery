@@ -1,0 +1,26 @@
+type: ShieldWall
+
+name: "Large Plated Phase Wall"
+description: "Protects structures from enemy projectiles. Has more health and armor than the regular Phase Wall. reflecting most bullets upon impact."
+details: "Lrg PHAAAAAYYYZEE!!! Das me nam! go tak to Surg wol. Also i hav a voice!"
+
+health: 3600
+armor: 12
+
+size: 2
+buildTime: 62.4
+requirements: [
+  phase-fabric/36
+  thorium/24
+  silicon/28
+]
+
+shieldHealth: 900
+regenSpeed: 1.85
+breakCooldown: 300
+chanceDeflect: 10
+deflectSound: deflection
+
+researchCostMultiplier: 2
+research: plated-phase-wall
+category: defense

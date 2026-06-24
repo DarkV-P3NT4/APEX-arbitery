@@ -1,0 +1,26 @@
+type: Wall
+
+name: "Large Plated Surge Wall"
+description: "Protects structures from enemy projectiles. Has more health and armor than the regular Surge Wall. periodically releasing electric arcs upon contact."
+details: "Hi... I'm Large Surge Wall, Somehow the most Tankiest Wall here and just have the most normal Special Buffs... oh and by the way i have a voice. You should meet Phase Wall, I like her."
+
+health: 5520
+armor: 16
+
+size: 2
+buildTime: 57.6
+requirements: [
+  surge-alloy/36
+  thorium/24
+  silicon/20
+  plastanium/16
+]
+
+lightningChance: 0.1
+lightningDamage: 30
+lightningLength: 21
+lightningSound: zaptator
+
+researchCostMultiplier: 2
+research: plated-surge-wall
+category: defense
