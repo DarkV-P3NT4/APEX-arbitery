@@ -1,0 +1,10 @@
+name: "custom-apex"
+displayName: "APEX Arbitery"
+author: "Dark V"
+description: "[#024CAE]IT IS AWAITING."
+subtitle: "JUDGEMENT."
+version: "0.1 release"
+repo: DarkV-P3NT4/APEX-arbitery
+minGameVersion: 146
+
+hidden: false
