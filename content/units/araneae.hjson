@@ -1,0 +1,237 @@
+type: legs
+
+name: "Araneae"
+description: "[#bf92f9]OVERPOPULATE. []A Dangerous Queen of the Insectoids, Capable of Tearing most defenses with ease and Constructing her own Children."
+details: "Project-Behemoth Record Details 103#
+
+Code A7-DG: [#bf92f9]ARANEAE []was created due to the Discovery of the Insectoids forming a Coalition in Overgrowth. Which had been dealt while the Sharded are busy Conquering the Launch Terminal of Crux.
+
+The Reason is Unknown of the Formed Coalition, as the Hive itself attempt to rebel against us. Unfortunately for them, their Strength in Numbers and the [#565656]PROTOTYPE []they have created are mere Disdain.
+
+as we have designed [#BF92F9]ARANEAE []to exactly improve the Attempted Prototype of what the Hive attempted to do, it is proven more superior than what they created. keep it in mind that the [red]CRUX []will soon take hands of the [#024CAE]APEX []Technology."
+
+health: 59400
+armor: 36
+
+speed: 0.28
+hitSize: 44
+range: 232
+
+itemCapacity: 150
+
+canBoost: false
+flying: false
+
+targetAir: true
+targetGround: true
+
+immunities: [
+  sapped
+  spore-slowed
+  shocked
+  overclock
+]
+
+faceTarget: true
+rotateSpeed: 1
+outlineColor: "565666"
+
+legCount: 6
+legGroupSize: 2
+legContinuousMove: false
+legLength: 56
+stepSound: "walkerStep"
+stepSoundVolume: 0.75
+stepShake: 10
+legBaseOffset: 8
+legPairOffset: 0.2
+legStraightness: 0.25
+baseLegStraightness: 0.25
+legMoveSpace: 0.55
+legForwardScl: 1.1
+legSpeed: 4.5
+legExtension: -8
+legSplashDamage: 260
+legSplashRange: 40
+hovering: true
+allowLegStep: true
+deathSound: "araneae-death"
+deathShake: 50
+
+groundLayer: 75
+
+research: toxopid
+
+abilities: [
+    {
+        type: UnitSpawnAbility
+        display: false
+        unit: crawler
+        spawnTime: 1500
+        spawnX: -8
+        spawnY: -16
+    }
+    {
+        type: UnitSpawnAbility
+        display: false
+        unit: crawler
+        spawnTime: 1500
+        spawnX: 8
+        spawnY: -16
+    }
+    {
+        type: UnitSpawnAbility
+        display: false
+        unit: atrax
+        spawnTime: 1800
+        spawnX: 0
+        spawnY: -18
+    }
+]
+
+weapons: [
+  {
+    name: "araneae-sap-weapon"
+    x: 13.5
+    y: 15
+    rotate: true
+    rotateSpeed: 7.5
+    reload: 12
+    shootY: 6
+    recoil: 2.5
+    shootSound: "shootSap"
+    bullet: {
+      type: SapBulletType
+      damage: 45
+      sapStrength: 0.85
+      length: 125
+      color: "bf92f8"
+      lifesteal: 0.3
+      status: "sapped"
+      statusDuration: 180
+    }
+  }
+  {
+    name: "araneae-sap-weapon"
+    x: 22
+    y: 5
+    rotate: true
+    rotateSpeed: 7.5
+    reload: 15
+    shootY: 5
+    recoil: 2
+    shootSound: "shootSap"
+    bullet: {
+      type: SapBulletType
+      damage: 45
+      sapStrength: 0.85
+      length: 160
+      color: "bf92f8"
+      lifesteal: 0.3
+      status: "sapped"
+      statusDuration: 180
+    }
+  }
+  {
+    name: "large-purple-artillery"
+    x: 13
+    y: -10
+    rotate: true
+    rotateSpeed: 3.5
+    rotationLimit: 135
+    reload: 5.5
+    shootY: 6
+    recoil: 2
+    inaccuracy: 3
+    shootSound: "shootCyclone"
+    bullet: {
+      type: BasicBulletType
+      damage: 45
+      splashDamage: 49
+      splashDamageRadius: 28
+      speed: 6.5
+      lifetime: 36
+      frontColor: "e0d3f7"
+      backColor: "9d7de1"
+      trailEffect: sporeSlowed
+      trailLength: 16
+      trailInterval: 3
+      trailColor: "9d7de1"
+      collidesGround: true
+      collidesAir: true
+      width: 16
+      height: 20
+    }
+  }
+  {
+    name: "araneae-cannon"
+    x: 0
+    y: -18
+    rotate: true
+    rotateSpeed: 2
+    rotationLimit: 90
+    mirror: false
+    reload: 300
+    shootY: 18
+    recoil: 6
+    shoot: {
+      shots: 3
+      shotDelay: 20
+    }
+    inaccuracy: 11
+    shootSound: "shootArtillerySapBig"
+    bullet: {
+      type: ArtilleryBulletType
+      damage: 350
+      splashDamage: 300
+      splashDamageRadius: 64
+      speed: 2.2
+      lifetime: 120
+      despawnSound: "explosionArtilleryShockBig"
+      knockback: 2.7
+      impact: true
+      width: 24
+      height: 32
+      collidesAir: false
+      collidesGround: true
+      frontColor: "e0d3f7"
+      backColor: "9d7de1"
+      trailEffect: sporeSlowed
+      trailLength: 16
+      trailInterval: 3
+      trailColor: "9d7de1"
+      status: "sapped"
+      statusDuration: 600
+      despawnEffect: scatheExplosion
+      lightning: 7
+      lightningDamage: 100
+      lightningLength: 18
+      lightningColor: "bf92f8"
+      
+      fragBullets: 12
+      fragLifeMin: 0.7
+      fragLifeMax: 2
+      fragBullet: {
+        type: ArtilleryBulletType
+        damage: 0
+        splashDamage: 150
+        splashDamageRadius: 24
+        speed: 2.2
+        frontColor: "e0d3f7"
+        backColor: "9d7de1"
+        width: 18
+        height: 24
+        despawnSound: "explosionArtilleryShock"
+        knockback: 1.8
+        impact: true
+        collidesAir: false
+        status: "sapped"
+        statusDuration: 600
+        lightning: 3
+        lightningDamage: 50
+        lightningLength: 12
+        lightningColor: "bf92f8"
+      }
+    }
+  }
+]

@@ -1,0 +1,124 @@
+type: mech
+
+name: "Supremacy"
+description: "[#FFA665]ORDER. []The Juggernaut of the Siege Armies. Born to die, but not before it's enemies."
+details: "Project-Behemoth Record Details 101#
+
+Code GR-62: [#FFA665]SUPREMACY []has been tested to be disciplined, resilient, and ruthless. It is primarily deployed for siege operations and heavy defensive engagements.
+
+Despite its immense firepower, the [#024CAE]APEX []unit becomes vulnerable during cooldown periods. Enemies capable of exploiting this window may inflict significant damage before it can resume firing.
+
+GR-62 [#FFA665]SUPREMACY []is among the most dangerous [#024CAE]APEX []units when paired with combat medics. Much like tanks in conventional warfare, sustained support greatly increases its battlefield effectiveness. Eliminating its support units should be considered a priority."
+
+health: 65000
+armor: 52
+
+speed: 0.26
+hitSize: 50
+range: 228
+
+itemCapacity: 150
+
+canBoost: false
+flying: false
+
+targetAir: true
+targetGround: true
+
+immunities: [
+  burning
+  shocked
+  melting
+  blasted
+  overclock
+]
+
+faceTarget: true
+singleTarget: true
+rotateSpeed: 1.1
+outlineColor: "565666"
+
+mechSideSway: 0.70
+mechFrontSway: 3
+stepSound: "stepSupremacy"
+stepSoundVolume: 0.65
+stepShake: 15
+loopSound: "idleSupremacy"
+loopSoundVolume: 0.15
+deathSound: "supremacy-death"
+deathShake: 75
+
+groundLayer: 65
+
+research: reign
+
+weapons: [
+  {
+    name: "supremacy-weapon"
+    x: 26.5
+    y: 1
+    rotate: false
+    alternate: false
+    inaccuracy: 5
+    reload: 1000
+    targetInterval: 5
+    targetSwitchInterval: 20.0
+    shoot: {
+      firstShotDelay: 180
+      shots: 160
+      shotDelay: 5.16415
+    }
+    shootY: 12
+    xRand: 2
+    recoil: 3
+    recoilTime: 60
+    shake: 5
+    ejectEffect: casing4
+    minWarmup: 0.3
+    chargeSound: chargeSupremacy
+    soundPitchMin: 1
+    soundPitchMax: 1
+    shootSound: shootBoom
+    shootSoundVolume: 0.3
+    bullet: {
+      type: BasicBulletType
+      damage: 80
+      splashDamage: 40
+      splashDamageRadius: 28
+      speed: 12.5
+      lifetime: 18.5
+      pierce: true
+      pierceCap: 2
+      pierceBuilding: true
+      armorMultiplier: 0.25
+      knockback: 2.5
+      impact: true
+      hitSize: 12
+      width: 20
+      height: 28.5
+      trailColor: "e58956ff"
+      trailEffect: smoke
+      trailLength: 8
+      trailWidth: 3.5
+      fragRandomSpread: 35
+      fragSpread: 12
+      fragBullets: 3
+      fragBullet: {
+        type: BasicBulletType
+        damage: 40
+        splashDamage: 30
+        splashDamageRadius: 12
+        lifetime: 5
+        speed: 8.5
+        pierce: true
+        pierceCap: 2
+        hitSize: 8
+        width: 12
+        height: 8
+        trailColor: "e58956ff"
+        trailLength: 4
+        trailWidth: 2.5
+      }
+    }
+  }
+]
