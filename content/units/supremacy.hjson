@@ -50,7 +50,33 @@ deathShake: 75
 
 groundLayer: 65
 
-research: reign
+research: {
+  parent: reign
+  objectives: [
+    {
+    type: SectorComplete
+    preset: planetaryTerminal
+    }
+    {
+    type: Research
+    content: custom-apex-contractor
+    }
+    {
+    type: Research
+    content: custom-apex-apex-assembler-juggernaut
+    }
+  ]
+}
+
+abilities: [
+  {
+  type: ShieldRegenFieldAbility
+  amount: 10
+  max: 500
+  reload: 120
+  range: 100
+  }
+]
 
 weapons: [
   {
@@ -68,7 +94,7 @@ weapons: [
       shots: 160
       shotDelay: 5.16415
     }
-    shootY: 12
+    shootY: 16
     xRand: 2
     recoil: 3
     recoilTime: 60
@@ -82,6 +108,15 @@ weapons: [
     shootSoundVolume: 0.3
     bullet: {
       type: BasicBulletType
+      shootEffect: {
+        type: ParticleEffect
+        colorFrom: FFA665ff
+        colorTo: e58956ff
+        particles: 6
+        cone: 60
+        casingFlip: true
+        interp: pow3Out
+      }
       damage: 80
       splashDamage: 40
       splashDamageRadius: 28

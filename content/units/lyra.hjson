@@ -54,8 +54,20 @@ deathSound: "lyra-death"
 deathShake: 50
 
 groundLayer: 65
-research: corvus
 
+research: {
+  parent: corvus
+  objectives: [
+    {
+    type: Research
+    content: custom-apex-contractor
+    }
+    {
+    type: Research
+    content: custom-apex-apex-assembler-combat-medic
+    }
+  ]
+}
 abilities: [
 {
     type: ShieldArcAbility
@@ -83,7 +95,7 @@ abilities: [
 weapons: [
 {
   type: RepairBeamWeapon
-  name: "repair-beam-weapon"
+  name: "repair-beam-weapon-center-large"
   rotate: true
   bullet: {
     type: BasicBulletType
@@ -123,12 +135,12 @@ weapons: [
     y: 0
     rotate: false
     mirror: false
-    shootCone: 5
     reload: 666
     initialShootSound: "lyra-shootinitial"
     shootSound: "beamPlasma"
     shootSoundVolume: 1
     recoil: 0
+    predictTarget: false
     cooldownTime: 444
     chargeSound: "lyra-charge"
     soundPitchMax: 1

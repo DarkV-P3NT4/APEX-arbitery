@@ -60,8 +60,23 @@ deathShake: 50
 
 groundLayer: 75
 
-research: toxopid
-
+research: {
+  parent: toxopid
+  objectives: [
+    {
+    type: SectorComplete
+    preset: planetaryTerminal
+    }
+    {
+    type: Research
+    content: custom-apex-contractor
+    }
+    {
+    type: Research
+    content: custom-apex-apex-assembler-insectoid
+    }
+  ]
+}
 abilities: [
     {
         type: UnitSpawnAbility
@@ -171,17 +186,33 @@ weapons: [
     rotateSpeed: 2
     rotationLimit: 90
     mirror: false
-    reload: 300
+    reload: 600
+    shake: 10
     shootY: 18
     recoil: 6
     shoot: {
+      firstShotDelay: 35
       shots: 3
       shotDelay: 20
     }
     inaccuracy: 11
     shootSound: "shootArtillerySapBig"
+    chargeSound: "chargeLancer"
     bullet: {
       type: ArtilleryBulletType
+      shootEffect: {
+      type: WaveEffect
+      colorFrom: "e0d3f7"
+      colorTo: "9d7de1"
+      lightColor: 9d7de1
+      lightOpacity: 2
+      sizeFrom: 2
+      sizeTo: 42
+      strokeFrom: 12
+      strokeTo: 0
+      interp: pow2Out
+      lifetime: 45
+      }
       damage: 350
       splashDamage: 300
       splashDamageRadius: 64
