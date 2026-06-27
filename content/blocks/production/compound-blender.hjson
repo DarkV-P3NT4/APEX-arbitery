@@ -1,0 +1,88 @@
+type: GenericCrafter
+name: "Compound Blender"
+description: "Mixes large amount of pyratite and spore pods into a large supply of Blast Compound... Slowly."
+
+size: 3
+health: 340
+category: crafting
+
+hasItems: true
+itemCapacity: 240
+
+craftTime: 3600
+
+consumes: {
+  power: 7.0
+  items: [
+    pyratite/60
+    spore-pod/60
+  ]
+}
+
+outputItems: [
+  blast-compound/120
+]
+
+drawer: {
+  type: "DrawMulti"
+  drawers: [
+    { type: "DrawRegion" suffix: "-bottom" }
+    { 
+      type: "DrawRegion" 
+      suffix: "-spinner" 
+      rotateSpeed: 6.0
+      spinSprite: true
+    }
+    { type: "DrawDefault" }
+  ]
+}
+
+ambientSound: loopDrill
+ambientSoundVolume: 0.6
+
+updateEffectChance: 0.1
+updateEffect: {
+  type: ParticleEffect
+  colorFrom: FEB380
+  colorTo: EB8778
+  line: true
+  length: 12
+  interp: pow3Out
+}
+craftEffect: {
+  type: ExplosionEffect
+  waveColor: F79A7B
+  waveLife: 15.0
+  waveStroke: 4.0
+  waveRad: 16.0
+  sparkColor: FEB380
+  sparkStroke: 3.0
+  sparkRad: 27.0
+  smokeColor: EB8778
+  smokeSize: 5.0
+  smokes: 8
+  sparks: 24
+}
+warmupSpeed: 0.08
+buildTime: 390
+requirements: [
+  lead/75
+  titanium/50
+  surge-alloy/25
+  thorium/45
+]
+research: {
+  parent: blast-mixer
+  objectives: [
+    {
+    type: SectorComplete
+    preset: nuclearComplex
+    }
+  ]
+  requirements: [
+    lead/7500
+    titanium/5000
+    surge-alloy/2500
+    thorium/4500
+  ]
+}

@@ -1,0 +1,90 @@
+type: GenericCrafter
+name: "Inferno Mixer"
+description: "Mixes Pyratite from Sand, Lead, and Coal. Requires Slag for more Heat."
+size: 3
+health: 320
+craftTime: 150
+hasItems: true
+hasLiquids: true
+itemCapacity: 30
+liquidCapacity: 30
+consumes: {
+  power: 1.8
+  items: [
+    coal/4
+    lead/6
+    sand/6
+  ]
+  liquids: [
+    slag/0.08
+  ]
+}
+
+outputItem: pyratite/4
+
+buildTime: 210
+requirements: [
+  copper/100
+  lead/100
+  silicon/80
+  graphite/80
+]
+craftEffect: {
+  type: MultiEffect
+  effects: [
+  {
+  type: WaveEffect
+  strokeFrom: 4
+  strokeTo: 0
+  lifetime: 45
+  sizeFrom: 0
+  sizeTo: 17
+  sides: 4
+  interp: pow3Out
+  colorFrom: FECA80FF
+  colorTo: EA9B78FF
+  rotation: 45
+  }
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 0
+  lifetime: 45
+  interp: pow3Out
+  sizeFrom: 3.5
+  sizeTo: 0
+  colorFrom: FECA80FF
+  colorTo: EA9B78FF
+  }
+  ]
+}
+updateEffect: {
+  type: ParticleEffect
+  particles: 6
+  length: 12
+  lifetime: 30
+  sizeFrom: 3
+  sizeTo: 0
+  interp: pow2Out
+  colorFrom: EA9B78FF
+  colorTo: FECA80FF
+}
+ambientSound: loopCombustion
+ambientSoundVolume: 0.35
+
+category: crafting
+research: {
+  parent: pyratite-mixer
+  objectives: [
+    {
+    type: SectorComplete
+    preset: facility32m
+    }
+  ]
+  requirements: [
+    copper/3000
+    lead/2800
+    graphite/1800
+    silicon/1800
+  ]
+}

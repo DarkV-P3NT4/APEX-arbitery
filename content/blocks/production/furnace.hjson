@@ -1,0 +1,70 @@
+type: GenericCrafter
+name: "Furnace"
+description: "Produces a Bundle of Metaglass using Lead and Sand"
+size: 3
+health: 280
+craftTime: 90
+hasItems: true
+itemCapacity: 30
+consumes: {
+  power: 1.8
+  items: [
+    lead/5
+    sand/10
+  ]
+}
+
+outputItem: metaglass/5
+
+buildTime: 210
+requirements: [
+  copper/120
+  lead/100
+  titanium/40
+  graphite/80
+]
+craftEffect: {
+  type: ParticleEffect
+  particles: 8
+  length: 24
+  lifetime: 45
+  sizeFrom: 6
+  sizeTo: 0
+  interp: pow3Out
+  colorFrom: ffffffff
+  colorTo: eeeeeeff
+}
+updateEffect: {
+  type: ParticleEffect
+  particles: 8
+  length: 4
+  lifetime: 90
+  sizeFrom: 3
+  sizeTo: 0
+  interp: pow2Out
+  colorFrom: ffffffff
+  colorTo: eeeeeeff
+}
+ambientSound: loopSmelter
+ambientSoundVolume: 0.4
+
+category: crafting
+research: {
+  parent: kiln
+  objectives: [
+    {
+    type: SectorComplete
+    preset: saltFlats
+    }
+    {
+    type: Research
+    content: water-extractor
+    }
+  ]
+  requirements: [
+    copper/2800
+    lead/1800
+    graphite/1800
+    titanium/900
+  ]
+}

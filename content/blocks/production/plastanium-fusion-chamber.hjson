@@ -1,0 +1,139 @@
+type: GenericCrafter
+name: "Plastanium Fusion Chamber"
+description: "Fuses Titanium and Oil into Refined Plastanium. Requires Coal for additional Fuel."
+size: 3
+health: 300
+craftTime: 120
+hasItems: true
+hasLiquids: true
+itemCapacity: 20
+liquidCapacity: 90
+consumes: {
+  power: 6
+  items: [
+    titanium/4
+    coal/2
+  ]
+  liquids: [
+    oil/0.75
+  ]
+}
+
+outputItem: plastanium/6
+
+buildTime: 300
+requirements: [
+  lead/130
+  plastanium/80
+  titanium/100
+  silicon/80
+]
+craftEffect: {
+  type: MultiEffect
+  effects: [
+  {
+  type: WaveEffect
+  strokeFrom: 4
+  strokeTo: 0
+  sizeFrom: 0
+  sizeTo: 17
+  colorFrom: 9CB664
+  colorTo: EDF3A9
+  sides: 4
+  rotation: 45
+  interp: pow2Out
+  }
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 0
+  sizeFrom: 3
+  sizeTo: 0
+  colorFrom: CBD97F
+  colorTo: 9CB664
+  interp: pow3Out
+  }
+  ]
+}
+updateEffect: {
+  type: MultiEffect
+  effects: [
+  {
+  type: ParticleEffect
+  particles: 4
+  length: 2
+  lifetime: 30
+  sizeFrom: 3.5
+  sizeTo: 0
+  interp: pow3In
+  colorFrom: 232323FF
+  colorTo: 111111FF
+  }
+  {
+  type: ParticleEffect
+  particles: 8
+  length: 6
+  lifetime: 45
+  line: true
+  colorFrom: 9CB664
+  colorTo: EDF3A9
+  }
+  ]
+}
+ambientSound: loopBio
+ambientSoundVolume: 1
+
+category: crafting
+research: {
+  parent: plastanium-compressor
+  objectives: [
+    {
+    type: SectorComplete
+    preset: taintedWoods
+    }
+    {
+    type: SectorComplete
+    preset: testingGrounds
+    }
+  ]
+  requirements: [
+    lead/5200
+    silicon/2000
+    titanium/2800
+    plastanium/2000
+  ]
+}
+drawer: {
+  type: DrawMulti
+
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+
+    {
+      type: DrawLiquidRegion
+      drawLiquid: oil
+      alpha: 1
+    }
+
+    {
+      type: DrawDefault
+    }
+
+    {
+      type: DrawSoftParticles
+      color: "9CB664"
+      color2: "9CB664"
+      particleSize: 7
+      particleRad: 5
+      particles: 4
+    }
+    {
+      type: DrawGlowRegion
+      suffix: "-top"
+      color: ffffffde
+    }
+  ]
+}
