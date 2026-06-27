@@ -1,0 +1,33 @@
+type: OverdriveProjector
+
+name: Booster
+description: "Increases the speed of nearby buildings. Optionally uses Silicon to increase range and speed boost."
+details: "Not to be confused of reVision's Overdriver."
+
+size: 1
+health: 70
+buildTime: 150
+requirements: [
+    lead/30
+    copper/35
+    silicon/20
+]
+researchCostMultiplier: 30.0
+research: overdrive-projector
+category: effect
+
+range: 52
+
+speedBoost: 1.2
+speedBoostPhase: 0
+phaseRangeBoost: 0
+hasPower: true
+
+consumes: {
+    power: 1
+}
+
+canOverdrive: false
+
+baseColor: feb380ff
+phaseColor: ffb347

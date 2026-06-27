@@ -1,0 +1,52 @@
+type: MendProjector
+name: "Mend Field"
+description: "Periodically repairs nearby buildings in it's vicinity. Requires Cryofluid to operate continuously. Optionally uses Phase Fabric to greatly increase repair range and effectiveness."
+details: "Not to be confused with reVision's Mend Dome."
+health: 650
+size: 3
+buildTime: 660
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+baseColor: 84f491FF
+range: 280
+reload: 60
+healPercent: 5.5
+phaseBoost: 0
+phaseRangeBoost: 0
+
+canOverdrive: true
+
+requirements: [
+    lead/260
+    titanium/220
+    silicon/260
+    plastanium/160
+    phase-fabric/150
+]
+category: effect
+
+consumes: {
+  power: 10
+  liquids: [
+    cryofluid/0.3
+  ]
+}
+
+research: {
+  parent: mend-projector
+  requirements: [
+  lead/21000
+  titanium/17000
+  silicon/20000
+  plastanium/16500
+  phase-fabric/14500
+  ]
+  objectives: [
+    {
+    type: Research
+    content: overdrive-dome
+    }
+  ]
+}
