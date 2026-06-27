@@ -14,9 +14,9 @@ This includes
 
 **CUSTOM MUSIC** - Woah custom music? only 3 though, im not that committing despite my passion [Dev Warning, Menu and Launch can crash when its trying to loop]
 
-and Upcoming Things:
-
 **ADVANCED FACTORIES** - Repetitive Factory blocks? why not sum Advanced Ones! means More Demands of Maintenance
+
+and Upcoming Things:
 
 **CUSTOM UNITS** - ...I actually made alot of concept units in mind and they were very cool! although some wouldnt be possible due to HJSON limitations, Im no Java guy
 
@@ -27,3 +27,31 @@ and Upcoming Things:
 THATS IT...
 
 God i hate GitHub's Limitation to mobile
+
+# CHANGELOGS:
+
+0.2 - Advancement Update
+> Added the Following 3x3 Factories:
+__Furnace__
+__Inferno Mixer__
+__Compound Blender__
+__Cryofluid Concentrator__
+__Plastanium Fusion Chamber__
+
+> Rebalanced SUPREMACY, ARANEAE, and LYRA
+Additionally Polished their Render and VFX slightly
+
+> Added new Effect Blocks:
+__Mend Field__
+__Booster__
+
+end of Changelog.
+
+0.1 - Release
+its Released... thats it
+
+end of Changelog.
+
+# CREDITS:
+
+Current Mod Maker and Solo Author: Dark V [Also known as DarkV-P3NT4]
